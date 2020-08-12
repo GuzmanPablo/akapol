@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/arquivos/akapol-institutional.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family&#61;Rubik:wght&#64;500&#38;display&#61;swap"
+        rel="stylesheet" />
+    <vtex:template id="AKAPOL-commonHead" />
+
+    <!-- Bootstrap 4.5 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="all">
+        <vtex:template id="AKAPOL-header" />
+
+        <main class="wrapper">
+            <div class="content">
+                <h1 class="inst__text inst__text--title primary-color">Conocé todas nuestras marcas</h1>
+                <section class="faq__content"></section>
+                <section class="tip-bar">
+                    <div class="wrapper">
+                      <ul>
+                        <li>
+                          <div class='wrap-icon'><img src="/arquivos/icon-credito.png" alt="" title="" /></div>
+                          <div class="wrap-text"><strong>Pagá con tarjeta</strong> <span>ver promociones vigentes</span></div>
+                        </li>
+                        <li>
+                          <div class='wrap-icon'><img src="/arquivos/icon-envio.png" alt="" title="" /></div>
+                          <div class="wrap-text"><strong>Envío GRATIS desde $2.500</strong> <span>para pedidos en AMBA </span></div>
+                        </li>
+                        <li>
+                          <div class='wrap-icon'><img src="/arquivos/icon-tienda.png" alt="" title="" /></div>
+                          <div class="wrap-text"><strong>Retiro GRATIS en tienda</strong> <span>ver dirección de retiro</span></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+            </div>
+        </main>
+
+        <vtex:template id="AKAPOL-footer" />
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <vtex:contentPlaceHolder id="Nuestras marcas" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <vtex:template id="AKAPOL-commonBottom" />
+    <div style="display:none;">vtex.cmc:welcomeMessage</div>
+    <script>
+        window.akapolQuestions = [{
+            title: "Generales",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Formas de pago",
+                    response:
+                        `Envío Express: Si tu compra es con envío a CABA y la efectúas hoy hasta las 18:00 horas, recibirás tus productos de lunes a viernes del dia siguiente, entre las 12:00 y 19:00 horas. O si tu compra es realizada hoy antes de las 15:00 horas, podes recibirla en el mismo día de 15:00 a 19:00 horas.
+Envío 48 horas: Si tu compra es con envío para la Capital Federal y Gran Bs. AS. y la efectúas hoy hasta las 14:00 horas, recibirás tus productos hasta dos día hábiles siguientes entre las 9:00 y las 18:00 horas.
+Envío Programado: Disponible para todo el país (excepto Tierra del Fuego para paquetes grandes). Si efectúas tu compra hoy antes de las 14:00 horas, recibirás tu producto en las fechas disponibles que elijas.
+Envío a Tienda o puntos de retiro: Tenés disponible la opción de retiro en tienda Baires Rocks o puntos de retiro de proveedores logísticos para productos de tamaño pequeño.`,
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        },
+        {
+            title: "Unipox",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        }, {
+            title: "Unipox",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        }, {
+            title: "Unipox",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        }, {
+            title: "Unipox",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        }, {
+            title: "Unipox",
+            content: [
+                {
+                    question: "Formas de envío",
+                    response:
+                        "Cambiar texto",
+                },
+                {
+                    question: "Devoluciones",
+                    response:
+                        `Cambiar texto`,
+                },
+            ],
+        }]
+    </script>
+
+    <script src="/arquivos/akapol-institutional.js"></script>
+</body>
+
+</html>

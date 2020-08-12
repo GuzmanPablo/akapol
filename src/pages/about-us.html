@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/arquivos/akapol-institutional.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family&#61;Rubik:wght&#64;500&#38;display&#61;swap"
+        rel="stylesheet" />
+    <vtex:template id="AKAPOL-commonHead" />
+</head>
+
+<body>
+    <div class="all">
+        <vtex:template id="AKAPOL-header" />
+
+        <main class="wrapper about-us">
+            <div class="about-us__banner">
+                <vtex:contentPlaceHolder id="Banner principal" />
+            </div>
+            <div class="content">
+                <h2 class="inst__text inst__text--title primary-color">Nosotros</h2>
+                <p class="inst__text">Akapol es una empresa argentina formada por capitales nacionales y con una
+                    trayectoria de más de cincuenta años en el mercado. Sus inicios se remontan al año 1962, época en la
+                    cual la empresa operaba a través de su establecimiento industrial, ubicado en Villa Ballester,
+                    provincia de Buenos Aires. En la actualidad Akapol cuenta con una planta industrial ubicada en
+                    Zelaya, provincia de Buenos Aires, y su sede administrativa en Villa Ballester.</p>
+                <p class="inst__text">Desde sus comienzos, el objetivo de Akapol ha sido desarrollar y comercializar
+                    productos con marca propia, que brindan soluciones prácticas a personas que realizan tareas en el
+                    hogar mediante el uso de adhesivos y productos relacionados con dichas tareas.</p>
+                <p class="inst__text">La principal fortaleza de Akapol es el prestigio que han alcanzados sus marcas.
+                    Con estándares de calidad internacional los productos son líderes de cada una de las categorías o
+                    segmentos de mercado en donde participan. Como clara muestra de esto, los productos de Akapol se
+                    pueden encontrar en gran parte de los hogares del país, satisfaciendo las necesidades de los
+                    usuarios.</p>
+                <p class="inst__text">Marcas como POXIPOL®, POXIRAN®, POXILINA®, FASTIX®, LA GOTITA®, POXIMIX®, EL
+                    PULPITO®, POXITAS®, UNIPOX®, VOLIGOMA® y VOLIBARRA® son sinónimo de confianza, trayectoria y
+                    garantía de calidad.</p>
+                <p class="inst__text">De cara al futuro, la Compañía continúa investigando las necesidades de los
+                    usuarios para seguir desarrollando productos prestigiosos que faciliten las tareas del consumidor
+                    hogareño. </p>
+            </div>
+
+            <section class="brands">
+                <div class="wrapper">
+                    <div class="section-header">
+                        <h3 class="inst__text inst__text--title">Nuestras marcas</h3>
+                        <a href="#"></a>
+                    </div>
+                    <div class="slide">
+                        <vtex:contentPlaceHolder id="Nuestras marcas" />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <vtex:template id="AKAPOL-footer" />
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <vtex:template id="AKAPOL-commonBottom" />
+    <div style="display:none;">vtex.cmc:welcomeMessage</div>
+    <script>
+        (function () {
+            function initialize() {
+                var settings = {
+                    infinite: true,
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    pauseOnHover: false,
+                    nextArrow:
+                        '<button type="button" class="slick-arrow slick-next"><i class="ico-drop-4"></i></button>',
+                    prevArrow:
+                        '<button type="button" class="slick-arrow slick-prev"><i class="ico-drop-3"></i></button>',
+                    slidesToShow: 6,
+                    slidesToScroll: 6,
+                    responsive: [
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                adaptiveHeight: true,
+                            },
+                        },
+                    ],
+                };
+                $(".brands .slide").slick(settings);
+            }
+
+            $(document).ready(initialize);
+        })();
+    </script>
+</body>
+
+</html>

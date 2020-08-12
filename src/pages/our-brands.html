@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+    <vtex:metaTags />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/arquivos/akapol-institutional.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family&#61;Rubik:wght&#64;500&#38;display&#61;swap"
+        rel="stylesheet" />
+    <vtex:template id="AKAPOL-commonHead" />
+</head>
+
+<body>
+    <div class="all">
+        <vtex:template id="AKAPOL-header" />
+
+        <main class="wrapper">
+            <h1 class="inst__text inst__text--title primary-color">Conocé todas nuestras marcas</h1>
+            <div class="our-brands__mozaic">
+                <vtex:contentPlaceHolder id="Mozaico de marcas" />
+            </div>
+        </main>
+
+        <vtex:template id="AKAPOL-footer" />
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <vtex:contentPlaceHolder id="Nuestras marcas" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <vtex:template id="AKAPOL-commonBottom" />
+    <div style="display:none;">vtex.cmc:welcomeMessage</div>
+</body>
+
+</html>
